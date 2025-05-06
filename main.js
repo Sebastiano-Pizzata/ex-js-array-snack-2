@@ -95,3 +95,14 @@ const areAuthorsAdult = authors.every(a => a.age > 18)
 authors.sort((a, b) => areAuthorsAdult === true ? a.age - b.age : b.age - a.age)
 console.log(authors)
 
+
+
+//SNACK 3 CON .REDUCE()
+//Creare un array (ages) che contiene le età degli autori dei libri.
+//Calcola la somma delle età (agesSum) usando reduce.
+//Stampa in console l’età media degli autori dei libri.
+
+const ages = books.map(book => book.author)
+const ageSum = ages.reduce((acc, curr) => acc + curr.age, 0)
+console.log('Età media :', ageSum / books.length)
+
